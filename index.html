@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Senra - Dev</title>
+    <meta name="description" content="Gabriel Senra, Desenvolvedor Full Stack especializado em APIs REST com Node.js e PHP/Laravel, e interfaces responsivas em Vue 3.">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <link rel="stylesheet" href="style.css?v=24">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="iam">
+            <h4 style="color: white; text-align: center;">Olá! eu sou o Gabriel, 👋</h4>
+            <h1 style="text-align: center;">Desenvolvedor <br> Full Stack.</h1>
+            <div class="desc-p">
+                <p>Tenho 32 anos e 3 anos de experiência na área.</p>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <!-- linkedin -->
+            <a href="https://www.linkedin.com/in/fullstackgabe/" aria-label="LinkedIn">
+                <img class="social-icon" src="icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <!-- instagram  -->
+            <a href="https://www.instagram.com/bielcwb/" aria-label="Instagram">
+                <img class="social-icon" src="icons/instagram.svg" alt="Instagram">
+            </a>
+            <!-- github -->
+            <a href="https://github.com/fullstackgabe" aria-label="GitHub">
+                <img class="social-icon" src="icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+
+        <div class="cv">
+            <button type="button" id="baixar-cv-btn" class="btn">
+                <span>Baixar CV</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5000ca" fill-opacity="1"
+                d="M0,32L48,80C96,128,192,224,288,229.3C384,235,480,149,576,144C672,139,768,213,864,218.7C960,224,1056,160,1152,144C1248,128,1344,160,1392,176L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                data-darkreader-inline-fill=""></path>
+        </svg>
+    </div>
+
+    <div class="projects">
+        <h4>Meus Projetos</h4>
+        <br>
+        <div class="projects-carousel">
+            <button class="carousel-btn carousel-prev" aria-label="Anterior">‹</button>
+            <div class="projects-viewport">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <img src="icons/github.svg" alt="Ícone do Projeto">
+                        </div>
+                        <div class="project-info">
+                            <h5>Filme Misterioso</h5>
+                            <p>Aplicação interativa para descobrir e explorar filmes aleatórios com base em preferências.</p>
+                            <div class="project-techs">
+                                <img src="icons/html.svg" alt="HTML" title="HTML">
+                                <img src="icons/css.svg" alt="CSS" title="CSS">
+                                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript">
+                            </div>
+                            <a href="https://filmemisterioso.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <img src="icons/github.svg" alt="Ícone do Projeto">
+                        </div>
+                        <div class="project-info">
+                            <h5>Pladim</h5>
+                            <p>Planejador de tarefas gamificado que transforma sua rotina em conquistas.</p>
+                            <div class="project-techs">
+                                <img src="icons/vue.svg" alt="Vue" title="Vue">
+                                <img src="icons/typescript.svg" alt="TypeScript" title="TypeScript">
+                            </div>
+                            <a href="https://pladim.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <img src="icons/github.svg" alt="Ícone do Projeto">
+                        </div>
+                        <div class="project-info">
+                            <h5>CRM Assistência</h5>
+                            <p>Gestão de assistência técnica com controle de clientes e ordens de serviço.</p>
+                            <div class="project-techs">
+                                <img src="icons/php.svg" alt="PHP" title="PHP">
+                                <img src="icons/laravel.svg" alt="Laravel" title="Laravel">
+                            </div>
+                            <a href="https://github.com/fullstackgabe/crm_assistencia" target="_blank" rel="noopener noreferrer" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-next" aria-label="Próximo">›</button>
+        </div>
+    </div>
+
+    <div class="wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5000ca" fill-opacity="1"
+                d="M0,32L40,64C80,96,160,160,240,176C320,192,400,160,480,133.3C560,107,640,85,720,96C800,107,880,149,960,149.3C1040,149,1120,107,1200,90.7C1280,75,1360,85,1400,90.7L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <div class="sobremim">
+        <h4 style="color: white;">Sobre Mim</h4>
+        <img src="https://live.staticflickr.com/65535/53422665994_7722f09303.jpg" width="460" height="460" class="sobremim-image" alt="Gabriel" />
+
+        <div class="sobremim-info">
+            <div class="sobremim-card">
+                <div class="sobremim-card-row">
+                    <span class="sobremim-card-icon">📍</span>
+                    <div class="sobremim-card-text">
+                        <strong>Localização</strong>
+                        <span>Curitiba - PR.</span>
+                    </div>
+                </div>
+
+                <div class="sobremim-card-row">
+                    <span class="sobremim-card-icon">🎓</span>
+                    <div class="sobremim-card-text">
+                        <strong>Formação</strong>
+                        <span>Análise e Desenvolvimento de Sistemas.</span>
+                    </div>
+                </div>
+
+                <div class="sobremim-card-row">
+                    <span class="sobremim-card-icon">🎯</span>
+                    <div class="sobremim-card-text">
+                        <strong>Hobbies</strong>
+                        <span>Assistir filmes, escutar música e jogar videogame.</span>
+                    </div>
+                </div>
+
+                <div class="sobremim-card-row">
+                    <span class="sobremim-card-icon">✨</span>
+                    <div class="sobremim-card-text">
+                        <strong>Qualidades</strong>
+                        <span>Curiosidade, determinação e proatividade.</span>
+                    </div>
+                </div>
+
+                <div class="sobremim-card-row">
+                    <span class="sobremim-card-icon">❤️</span>
+                    <div class="sobremim-card-text">
+                        <strong>Paixão</strong>
+                        <span>Criar soluções usando tecnologia.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5000ca" fill-opacity="1"
+                d="M0,160L40,149.3C80,139,160,117,240,101.3C320,85,400,75,480,85.3C560,96,640,128,720,122.7C800,117,880,75,960,85.3C1040,96,1120,160,1200,176C1280,192,1360,160,1400,144L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+
+    <div class="slider">
+        <h4>Habilidades</h4>
+        <div class="slide-tech">
+            <a>
+                <img class="slide" src="icons/php.svg?v=6" alt="PHP" title="PHP">
+            </a>
+            <a>
+                <img class="slide" src="icons/laravel.svg" alt="Laravel" title="Laravel">
+            </a>
+            <a>
+                <img class="slide" src="icons/html.svg" alt="HTML" title="HTML">
+            </a>
+            <a>
+                <img class="slide" src="icons/css.svg" alt="CSS" title="CSS">
+            </a>
+            <a>
+                <img class="slide" src="icons/javascript.svg" alt="JavaScript" title="JavaScript">
+            </a>
+            <a>
+                <img class="slide" src="icons/vue.svg" alt="Vue" title="Vue">
+            </a>
+            <a>
+                <img class="slide" src="icons/typescript.svg" alt="TypeScript" title="TypeScript">
+            </a>
+        </div>
+    </div>
+
+    <script src="resume.js"></script>
+    <script>
+        (function () {
+            const grid = document.querySelector('.projects-grid');
+            const viewport = document.querySelector('.projects-viewport');
+            const prev = document.querySelector('.carousel-prev');
+            const next = document.querySelector('.carousel-next');
+            if (!grid || !viewport || !prev || !next) return;
+
+            const cards = grid.querySelectorAll('.project-card');
+            const GAP = 30;
+            let page = 0;
+
+            function perPage() {
+                return window.matchMedia('(max-width: 600px)').matches ? 1 : 3;
+            }
+            function totalPages() {
+                return Math.ceil(cards.length / perPage());
+            }
+            function update() {
+                const tp = totalPages();
+                if (page > tp - 1) page = tp - 1;
+                if (page < 0) page = 0;
+                const offset = page * (viewport.offsetWidth + GAP);
+                grid.style.transform = 'translateX(-' + offset + 'px)';
+                const showBtns = tp > 1;
+                prev.style.display = showBtns ? '' : 'none';
+                next.style.display = showBtns ? '' : 'none';
+                prev.disabled = page === 0;
+                next.disabled = page >= tp - 1;
+            }
+            next.addEventListener('click', function () {
+                if (page < totalPages() - 1) { page++; update(); }
+            });
+            prev.addEventListener('click', function () {
+                if (page > 0) { page--; update(); }
+            });
+            window.addEventListener('resize', update);
+            update();
+        })();
+    </script>
+</body>
+</html>
