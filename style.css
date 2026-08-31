@@ -28,6 +28,24 @@ h4 {
 
 :root {
     font-size: 62.5%;
+
+    --fs-card-title: 2.1rem;
+    --fs-card-body: 1.55rem;
+    --fs-button: 1.5rem;
+    --icon-avatar: 92px;
+    --icon-badge: 38px;
+    --icon-social: 60px;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --fs-card-title: 1.8rem;
+        --fs-card-body: 1.3rem;
+        --fs-button: 1.3rem;
+        --icon-avatar: 64px;
+        --icon-badge: 30px;
+        --icon-social: 48px;
+    }
 }
 
 .main {
@@ -40,9 +58,13 @@ h4 {
     text-align: center;
 }
 
+.wave-emoji {
+    display: inline-block;
+}
+
 .desc-p {
     color: rgb(220, 220, 220);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     padding-top: 40px;
     text-align: center;
 }
@@ -123,16 +145,16 @@ path {
     flex-direction: column;
     background: white;
     border-radius: 15px;
-    padding: 8px 24px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    padding: 44px 34px 34px;
+    box-shadow: 0 0 26px rgba(80, 0, 202, 0.08);
     border: 1px solid #eee;
 }
 
 .sobremim-card-row {
     display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -150,30 +172,33 @@ path {
 }
 
 .sobremim-card-icon {
-    font-size: 2.6rem;
+    font-size: var(--fs-card-title);
     line-height: 1;
+    min-width: 32px;
+    margin-top: 2px;
+    text-align: center;
 }
 
 .sobremim-card-text {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
 }
 
 .sobremim-card-text strong {
     color: #5000ca;
-    font-size: 1.6rem;
+    font-size: var(--fs-card-title);
     font-weight: bold;
 }
 
 .sobremim-card-text span {
     color: #666;
-    font-size: 1.4rem;
+    font-size: var(--fs-card-body);
     line-height: 1.5;
 }
 
 .social-icon {
-    width: 50px;
+    width: var(--icon-social);
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -211,16 +236,22 @@ path {
 
 .project-card {
     flex: 0 0 calc((100% - 60px) / 3);
-    min-height: 460px;
+    min-height: 420px;
     background: white;
     border-radius: 15px;
-    padding: 30px;
+    padding: 36px 30px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 0 26px rgba(80, 0, 202, 0.08);
     border: 1px solid #eee;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(80, 0, 202, 0.16);
 }
 
 .project-info {
@@ -228,12 +259,16 @@ path {
     flex-direction: column;
     align-items: center;
     flex: 1;
+    width: 100%;
 }
 
 .project-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 28px;
+    padding: 18px;
+    border-radius: 50%;
+    background: #f5f2ff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,28 +281,38 @@ path {
 }
 
 .project-info h5 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #5000ca;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
 .project-info p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #666;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     line-height: 1.6;
+    max-width: 280px;
+    text-wrap: balance;
+}
+
+.project-footer {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 26px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
 }
 
 .project-link {
     display: inline-block;
-    margin-top: auto;
-    padding: 10px 25px;
+    padding: 12px 28px;
     background-color: transparent;
     color: #5000ca;
     border: 2px solid #5000ca;
     border-radius: 25px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -288,8 +333,8 @@ path {
 }
 
 .project-techs img {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
     opacity: 0.9;
 }
@@ -302,6 +347,8 @@ path {
     .project-card {
         flex: 0 0 auto;
         width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
     }
 }
 
@@ -364,7 +411,7 @@ path {
 
     .desc-p {
         padding-top: 40px;
-        font-size: 1rem;
+        font-size: var(--fs-card-body);
     }
 
     .main {
@@ -381,6 +428,28 @@ path {
     .sobremim-info {
         max-width: 88%;
         padding: 0;
+    }
+
+    .project-icon {
+        width: 70px;
+        height: 70px;
+        padding: 14px;
+        margin-bottom: 26px;
+    }
+
+    .project-info h5 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    .project-info p {
+        font-size: 1.4rem;
+        margin-bottom: 26px;
+    }
+
+    .project-link {
+        font-size: 1.4rem;
+        padding: 11px 26px;
     }
 
     .sobremim>p {
