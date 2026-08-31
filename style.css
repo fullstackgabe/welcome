@@ -200,26 +200,13 @@ path {
     margin-bottom: 100px;
 }
 
-/* Projetos Carousel */
-.projects-carousel {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.projects-viewport {
-    flex: 1;
-    overflow: hidden;
-    min-width: 0;
-}
-
 .projects-grid {
     display: flex;
     gap: 30px;
-    transition: transform 0.4s ease;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .project-card {
@@ -233,36 +220,6 @@ path {
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     border: 1px solid #eee;
-}
-
-.carousel-btn {
-    flex: 0 0 44px;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid #5000ca;
-    color: #5000ca;
-    cursor: pointer;
-    font-size: 2.6rem;
-    line-height: 1;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(80, 0, 202, 0.15);
-}
-
-.carousel-btn:hover:not(:disabled) {
-    background: #5000ca;
-    color: white;
-    transform: scale(1.1);
-}
-
-.carousel-btn:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
 }
 
 .project-icon {
@@ -329,19 +286,8 @@ path {
 }
 
 @media (max-width: 600px) {
-    .projects-carousel {
-        display: block;
-        padding: 0 20px;
-    }
-    .carousel-btn {
-        display: none;
-    }
-    .projects-viewport {
-        overflow: visible;
-    }
     .projects-grid {
         flex-direction: column;
-        transform: none !important;
         gap: 24px;
     }
     .project-card {
@@ -439,22 +385,6 @@ path {
 
     .projects {
         margin-top: 80px;
-    }
-
-    /* Ajuste leve para subir as setas no mobile sem sobrepor */
-    .carousel-btn {
-        position: static; /* Volta ao fluxo normal */
-        transform: translateY(-40px); /* Sobe apenas a seta visualmente */
-        margin: 0 10px; /* Garante espaçamento lateral */
-        z-index: 10;
-    }
-
-    /* Garante que ao clicar/tocar a seta não perca a posição vertical */
-    .carousel-btn:hover, 
-    .carousel-btn:active, 
-    .carousel-btn:focus {
-        transform: translateY(-40px) scale(1.1);
-        background: none;
     }
 
     .slide-tech {

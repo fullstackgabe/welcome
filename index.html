@@ -52,27 +52,21 @@
     <div class="projects">
         <h4>Meus Projetos</h4>
         <br>
-        <div class="projects-carousel">
-            <button class="carousel-btn carousel-prev" aria-label="Anterior">‹</button>
-            <div class="projects-viewport">
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <img src="icons/github.svg" alt="Ícone do Projeto">
-                        </div>
-                        <div class="project-info">
-                            <h5>Pladim</h5>
-                            <p>Planejador de tarefas gamificado que transforma sua rotina em conquistas.</p>
-                            <div class="project-techs">
-                                <img src="icons/vue.svg" alt="Vue" title="Vue">
-                                <img src="icons/typescript.svg" alt="TypeScript" title="TypeScript">
-                            </div>
-                            <a href="https://pladim.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver Projeto</a>
-                        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">
+                    <img src="icons/github.svg" alt="Ícone do Projeto">
+                </div>
+                <div class="project-info">
+                    <h5>Pladim</h5>
+                    <p>Planejador de tarefas gamificado que transforma sua rotina em conquistas.</p>
+                    <div class="project-techs">
+                        <img src="icons/vue.svg" alt="Vue" title="Vue">
+                        <img src="icons/typescript.svg" alt="TypeScript" title="TypeScript">
                     </div>
+                    <a href="https://pladim.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver Projeto</a>
                 </div>
             </div>
-            <button class="carousel-btn carousel-next" aria-label="Próximo">›</button>
         </div>
     </div>
 
@@ -169,45 +163,5 @@
         </div>
     </div>
 
-    <script>
-        (function () {
-            const grid = document.querySelector('.projects-grid');
-            const viewport = document.querySelector('.projects-viewport');
-            const prev = document.querySelector('.carousel-prev');
-            const next = document.querySelector('.carousel-next');
-            if (!grid || !viewport || !prev || !next) return;
-
-            const cards = grid.querySelectorAll('.project-card');
-            const GAP = 30;
-            let page = 0;
-
-            function perPage() {
-                return window.matchMedia('(max-width: 600px)').matches ? 1 : 3;
-            }
-            function totalPages() {
-                return Math.ceil(cards.length / perPage());
-            }
-            function update() {
-                const tp = totalPages();
-                if (page > tp - 1) page = tp - 1;
-                if (page < 0) page = 0;
-                const offset = page * (viewport.offsetWidth + GAP);
-                grid.style.transform = 'translateX(-' + offset + 'px)';
-                const showBtns = tp > 1;
-                prev.style.display = showBtns ? '' : 'none';
-                next.style.display = showBtns ? '' : 'none';
-                prev.disabled = page === 0;
-                next.disabled = page >= tp - 1;
-            }
-            next.addEventListener('click', function () {
-                if (page < totalPages() - 1) { page++; update(); }
-            });
-            prev.addEventListener('click', function () {
-                if (page > 0) { page--; update(); }
-            });
-            window.addEventListener('resize', update);
-            update();
-        })();
-    </script>
 </body>
 </html>
